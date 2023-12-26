@@ -4,8 +4,11 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open("version.txt","r",encoding="utf-8") as vh:
+    version_description = vh.read()
+    
 setup( name='treehue',
-       version='0.0.2',
+       version=version_description,
        description='TreeHue is a Python package for visually enhancing directory tree structures with color-coded representations.',
        long_description=long_description,      # Long description read from the the readme file
        long_description_content_type="text/markdown",
