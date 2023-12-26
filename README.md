@@ -1,9 +1,11 @@
+<p align='left'>
+<img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/TreeHue.png" width=120px>
+</p>
+
 ### TreeHue
 email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@astro.up.pt](mailto:jean@astro.up.pt)
 
 last stable version: 0.0.2
-
-In &beta; distribution phase - The README file is not complete. Tutorials will be made asap.
 
 github repository: <a href='https://github.com/neutrinomuon/TreeHue/'>TreeHue</a>
 
@@ -19,7 +21,7 @@ J.G. - Jean Gomes
 
 #### <b>RESUME</b>
 
-<img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/TreeHue.png" width=120>
+<img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/TreeHue.png" width=120px>
 
 Enhance your directory tree visualization with colorful representations using
 TreeHue, a Python package that brings vibrancy to your file system structure.

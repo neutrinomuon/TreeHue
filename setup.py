@@ -4,7 +4,7 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setup( name='TreeHue',
+setup( name='treehue',
        version='0.0.2',
        description='TreeHue is a Python package for visually enhancing directory tree structures with color-coded representations.',
        long_description=long_description,      # Long description read from the the readme file
@@ -17,8 +17,8 @@ setup( name='TreeHue',
            "Programming Language :: Python :: 3",
            "Operating System :: OS Independent",
                    ],
-       package_dir={"TreeHue": "src/python"},
-       packages=['TreeHue'],
+       package_dir={"treehue": "src/python"},
+       packages=['treehue'],
        data_files=[('', ['version.txt']),],
       )
     
