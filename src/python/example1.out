@@ -1,0 +1,27 @@
+[91m#################################################
+[0m[31mpython[0m
+[31m├── [96m1 test__pychache__[0m
+[31m│   ├── [32m1 treehue.cpython-39.pyc[0m
+[31m│   ├── [32m2 tree_colored.cpython-39.pyc[0m
+[31m│   └── [32m3 treehue_colored.cpython-39.pyc[0m
+[31m├── [32m4 example1.out[0m
+[31m├── [34m2 test[0m
+[31m│   └── [34m4 gogo[0m
+[31m│       └── [34m5 gogogo[0m
+[31m├── [36m5 example2.out[0m
+[31m├── [32m6 treehue.py[0m
+[31m├── [32m7 __init__.py[0m
+[31m├── [34m5 __pycache__[0m
+[31m│   ├── [32m1 treehue.cpython-39.pyc[0m
+[31m│   ├── [32m2 tree_colored.cpython-39.pyc[0m
+[31m│   └── [32m3 treehue_colored.cpython-39.pyc[0m
+[31m├── [32m11 example.out[0m
+[31m├── [32m12 treehue_colored.py[0m
+[31m└── [34m6 outro[0m
+[31m    └── [34m7 outro1[0m
+[33m
+7 directories, 12 files
+[0m[91m#################################################
+[0m[91mGenerated with tree_colored @ 2024 - © Jean Gomes
+[0m[91m#################################################
+[0m
