@@ -1,11 +1,17 @@
 ### TreeHue
 email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@astro.up.pt](mailto:jean@astro.up.pt)
 
-last stable version: 0.0.2
-
-In &beta; distribution phase - The README file is not complete. Tutorials will be made asap.
-
 github repository: <a href='https://github.com/neutrinomuon/TreeHue/'>TreeHue</a>
+
+last stable version: 0.0.2
+<!-- https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg -->
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg)
+
+<hr>
+
+![My Skills](https://skillicons.dev/icons?i=python,numpy&theme=light)<br>
+[![python3](https://img.shields.io/pypi/pyversions/TreeHue)](https://img.shields.io/pypi/pyversions/TreeHue)
+[![badgetlicense](https://anaconda.org/neutrinomuon/TreeHue/badges/license.svg)](https://anaconda.org/neutrinomuon/TreeHue/badges/license.svg)
 
 © Copyright ®
 
@@ -23,6 +29,16 @@ J.G. - Jean Gomes
 
 Enhance your directory tree visualization with colorful representations using
 TreeHue, a Python package that brings vibrancy to your file system structure.
+
+<img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/Education,_Studying,_University,_Alumni_-_icon.png#gh-light-mode-only" width="70px"><img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/Education_black_background-removebg.png#gh-dark-mode-only" width="70px">This project was also created with a focus on educational purposes.
+
+
+<img src="https://raw.githubusercontent.com/neutrinomuon/TreeHue/main/figures/PEP8-StyleGuide.jpg" width="70px"> Now, TreeHue has all its scripts in accordance with PEP 8 guidelines.
+
+<br>
+--------------------------------------------------------------------
+<br>
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
 <hr>
 

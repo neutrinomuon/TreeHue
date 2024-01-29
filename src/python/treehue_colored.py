@@ -284,8 +284,8 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
                              colors=colors,
                              file_extensions_colors=colors['file_extensions_colors'])
             if kwargs_dic['save_to_file'] is not None:
-                print(counter['directories'])
-                print(path)
+                # print(counter['directories'])
+                # print(path)
                 counter_aux = {'directories': counter['directories']-1,'files': 0}
                 contents_dic['lines'].extend( inner(path,
                                     prefix=prefix + extension,
