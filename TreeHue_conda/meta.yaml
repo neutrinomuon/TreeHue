@@ -1,0 +1,44 @@
+{% set name = "TreeHue" %}
+{% set version = "0.0.3" %}
+{% set url = "https://files.pythonhosted.org/packages/source/" + name[0] + "/" + name + "/" + name + "-" + version + ".tar.gz" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  # Using a local tarball
+  fn: "{{ name }}-{{ version }}.tar.gz"
+  url: "file:////Users/jeangomes/Desktop/tmp/TreeHue/dist/{{ name }}-{{ version }}.tar.gz"
+  sha256: 09ff3aa2dfcb895151d3d4fd18187bf9e00bee7fa221de0b3bf1a69f34447701
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - matplotlib
+    - numpy>=1.21.5
+    - pip
+    - python
+  run:
+    - matplotlib
+    - numpy>=1.21.5
+    - python
+
+test:
+  imports:
+    - TreeHue
+
+about:
+  home: "https://github.com/neutrinomuon/TreeHue"
+  license_file: 'LICENSE.txt'
+  license_url: "https://github.com/neutrinomuon/TreeHue/LICENSE.txt"
+  summary: "is an easy-to-use Python script that permits to print the structure of projects with/out colours"
+  doc_url: "https://github.com/neutrinomuon/TreeHue"
+  dev_url: "https://github.com/neutrinomuon/TreeHue"
+
+extra:
+  recipe-maintainers:
+    - neutrinomuon
