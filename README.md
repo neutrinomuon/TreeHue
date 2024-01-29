@@ -5,7 +5,7 @@ github repository: <a href='https://github.com/neutrinomuon/TreeHue/'>TreeHue</a
 
 last stable version: 0.0.3
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg -->
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)
 
 <hr>
 
