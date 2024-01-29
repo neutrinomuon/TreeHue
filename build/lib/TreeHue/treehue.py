@@ -22,12 +22,12 @@ This will help further imporvements and future mantainance.
 
 # import more general libraries
 import os
-import numpy as np
 
 # Import necessary libraries
 from pathlib import Path
 from itertools import islice
 
+# import numpy as np
 
 # Define constants
 SPACE =  '    '
@@ -68,16 +68,17 @@ def exclude_files_check(exclude_files,exclude_files_type,contents_list):
     return filtered_contents
 
 def inner(dir_path: Path, counting, prefix: str='', level=-1, **kwargs):
+    '''Recursive function for printing content of directories/files'''
     #print(dir_path)
-    
+
     # Acess keyword arguments from contents
-    # directories = counting['directories']
-    # files = counting['files']
+    kwargs['directories'] = kwargs.get('directories', 0)
+    kwargs['files'] = kwargs.get('files', 0)
 
     # Access keyword arguments from the 'kwargs' dictionary
-    limit_to_directories = kwargs.get('limit_to_directories', False)
-    exclude_files = kwargs.get('exclude_files', '')
-    exclude_files_type = kwargs.get('exclude_files_type', 'e')
+    kwargs['limit_to_directories'] = kwargs.get('limit_to_directories', False)
+    kwargs['exclude_files ']= kwargs.get('exclude_files', '')
+    kwargs['exclude_files_type'] = kwargs.get('exclude_files_type', 'e')
 
     # Debug
     # print()
@@ -85,37 +86,39 @@ def inner(dir_path: Path, counting, prefix: str='', level=-1, **kwargs):
 
     if not level:
         return # 0, stop iterating
-    if limit_to_directories:
+    if kwargs['limit_to_directories']:
         contents = [d for d in dir_path.iterdir() if d.is_dir()]
     else:
         contents = list(dir_path.iterdir())
 
-    contents = exclude_files_check(exclude_files,exclude_files_type,contents)
-    
-    contents_list = np.array(contents, dtype=str)
+    contents = exclude_files_check(kwargs['exclude_files'],
+                                   kwargs['exclude_files_type'],
+                                   contents)
+
+    # contents = np.array(contents, dtype=str)
     #print(contents_list)
-    logical = False
-    indices = []
-    for i_ in enumerate(contents_list):
-        logical_aux = False
-        for k_ in exclude_files:
+    # logical = False
+    # indices = []
+    # for i_index in enumerate(contents_list):
+    #     logical_aux = False
+    #     for k_index in kwargs['exclude_files']:
 
-            l = k_ in i_[1]
+    #         l_index = k_index in i_index[1]
 
-            if l == True:
-                logical_aux = True
+    #         if l_index is True:
+    #             logical_aux = True
 
-        if logical_aux == True:
-            logical = True
-        else:
-            indices.append( i_[0] )
+    #     if logical_aux is True:
+    #         logical = True
+    #     else:
+    #         indices.append( i_index[0] )
 
-    if logical == True and np.size(indices) > 0:
-        indices = np.array(indices, dtype=int)
-        contents_aux = []
-        for i_ in indices:
-            contents_aux.append( contents[ i_ ] )
-        contents = contents_aux
+    # if logical is True and np.size(indices) > 0:
+    #     indices = np.array(indices, dtype=int)
+    #     contents_aux = []
+    #     for i_index in indices:
+    #         contents_aux.append( contents[ i_index ] )
+    #     contents = contents_aux
         #print(contents)
         #print("logical",logical)
 
@@ -129,10 +132,10 @@ def inner(dir_path: Path, counting, prefix: str='', level=-1, **kwargs):
                              counting,
                              prefix=prefix+extension,
                              level=level-1,
-                             limit_to_directories=limit_to_directories,
-                             exclude_files=exclude_files,
-                             exclude_files_type=exclude_files_type)
-        elif not limit_to_directories:
+                             limit_to_directories=kwargs['limit_to_directories'],
+                             exclude_files=kwargs['exclude_files'],
+                             exclude_files_type=kwargs['exclude_files_type'])
+        elif not kwargs['limit_to_directories']:
             yield prefix + pointer + path.name
             counting['files'] += 1
 
@@ -149,10 +152,10 @@ def tree( dir_path: Path, level: int=-1, **kwargs ):
         dir_path = Path(os.getcwd())
 
     # Access keyword arguments from the 'kwargs' dictionary
-    limit_to_directories = kwargs.get('limit_to_directories', False)
-    length_limit = kwargs.get('length_limit', 1000)
-    exclude_files = kwargs.get('exclude_files', '')
-    exclude_files_type = kwargs.get('exclude_files_type', 'e')
+    kwargs['limit_to_directories'] = kwargs.get('limit_to_directories', False)
+    kwargs['length_limit'] = kwargs.get('length_limit', 1000)
+    kwargs['exclude_files'] = kwargs.get('exclude_files', '')
+    kwargs['exclude_files_type'] = kwargs.get('exclude_files_type', 'e')
 
     # save_to_file = kwargs.get('save_to_file', None)
 
@@ -161,7 +164,6 @@ def tree( dir_path: Path, level: int=-1, **kwargs ):
     # else:
     #     contents_dic['contents'] = list(dir_path.iterdir())
     #     contents_dic['contents_list'] = np.array(contents_dic['contents'], dtype=str)
-
 
     # if not isinstance(kwargs['exclude_files'], list):
     #     if isinstance(kwargs['exclude_files'], str):
@@ -190,34 +192,35 @@ def tree( dir_path: Path, level: int=-1, **kwargs ):
     #    else:
     #        exclude_files = list(exclude_files)
     # Ensure exclude_files is a list
-    if not isinstance(exclude_files, list):
-        if isinstance(exclude_files, str):
-            exclude_files = [exclude_files]
+    if not isinstance(kwargs['exclude_files'], list):
+        if isinstance(kwargs['exclude_files'], str):
+            kwargs['exclude_files'] = [kwargs['exclude_files']]
         else:
-            exclude_files = list(exclude_files)
+            kwargs['exclude_files'] = list(kwargs['exclude_files'])
 
     # Print Screen
-    print('#################################################')    
+    print('#################################################')
     print(dir_path.name)
     # Call the inner function and update directories and files
     iterator = inner(dir_path,
                      counting,
                      level=level,
-                     limit_to_directories=limit_to_directories,
-                     exclude_files=exclude_files,
-                     exclude_files_type=exclude_files_type)
-    for line in islice(iterator, length_limit):
+                     limit_to_directories=kwargs['limit_to_directories'],
+                     exclude_files=kwargs['exclude_files'],
+                     exclude_files_type=kwargs['exclude_files_type'])
+    for line in islice(iterator, kwargs['length_limit']):
         # Debug
         # print(kwargs['limit_to_directories'])
         print(line)
 
-    print(f"\n{counting['directories']} directories" + (f", {counting['files']} files" if counting['files'] > 0 else ""))
+    print(f"\n{counting['directories']} directories" \
+          + (f", {counting['files']} files" if counting['files'] > 0 else ""))
 
-    print('#################################################')   
+    print('#################################################')
     print('Generated with treehue@2024  --- © Jean Gomes ---')
     print('#################################################')
 
     if next(iterator, None):
-        print(f'... length_limit, {length_limit}, reached, counted:')
+        print(f"... length_limit, {kwargs['length_limit']}, reached, counted:")
 
     # print("TEST",exclude_files)
