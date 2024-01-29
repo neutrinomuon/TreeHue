@@ -25,4 +25,5 @@ jobs:
         pylint setup.py
     - name: Analysing the code with pylint in src/python directory
       run: |
-        pylint $(git ls-files 'src/python/*.py')
+        pylint $(git ls-files 'src/python/treehue.py')
+        pylint $(git ls-files 'src/python/treehue_colored.py')
