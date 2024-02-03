@@ -1,5 +1,5 @@
 {% set name = "TreeHue" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 {% set url = "https://files.pythonhosted.org/packages/source/" + name[0] + "/" + name + "/" + name + "-" + version + ".tar.gz" %}
 
 package:
@@ -10,7 +10,7 @@ source:
   # Using a local tarball
   fn: "{{ name }}-{{ version }}.tar.gz"
   url: "file:////Users/jeangomes/Desktop/tmp/TreeHue/dist/{{ name }}-{{ version }}.tar.gz"
-  sha256: 09ff3aa2dfcb895151d3d4fd18187bf9e00bee7fa221de0b3bf1a69f34447701
+  sha256: 1f8d15670fad8cf47c2b9c316db1fa8c5481ffb834dbe92107f1e30cbbbd8312
 
 build:
   number: 0
@@ -22,10 +22,13 @@ requirements:
     - numpy>=1.21.5
     - pip
     - python
+    - colorama
   run:
     - matplotlib
     - numpy>=1.21.5
+    - pip
     - python
+    - colorama
 
 test:
   imports:

@@ -17,7 +17,8 @@ from datetime import datetime
 from colorama import Fore, Style  # Import colorama for colored output
 
 import numpy as np
-
+# import sys
+# from tqdm import tqdm
 
 # file_extensions_colors = {
 #     '.py': Fore.RED,
@@ -97,7 +98,7 @@ def print_to_file(dir_path: Path, lines, counter, kwargs_dic):
                            + '#################################################\n' \
                            + Style.RESET_ALL)
                 file.write(Fore.LIGHTRED_EX \
-                           + f'Generated with tree_colored @ {current_year} - © Jean Gomes\n' \
+                           + f'Generated: treehue_colored @{current_year} - © Jean Gomes\n' \
                            + Style.RESET_ALL)
                 file.write(Fore.LIGHTRED_EX \
                            + '#################################################\n' \
@@ -179,8 +180,7 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
 
     counter = kwargs.get('counter', {})
     kwargs_dic = kwargs.get('kwargs_dic', {})
-
-    kwargs_dic['length_limit'] = kwargs.get('length_limit', 1000)
+    # kwargs_dic['length_limit'] = kwargs.get('length_limit', 1000)
 
     # colorido= {'colors': kwargs.get('colors', {}),
     #             'file_extensions_colors': kwargs.get('file_extensions_colors', {})}
@@ -220,6 +220,7 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
     contents_dic['pointers'] = [TEE] * (len(contents_dic['contents']) - 1) + [LAST]
     contents_dic['lines'] = [] if kwargs_dic['save_to_file'] is not None else None
 
+    # print('contents_dic','Created')
     characteristic = {'prefix': None,
                       'pointer': None,
                       'counter': counter,
@@ -288,7 +289,10 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
             if kwargs_dic['save_to_file'] is not None:
                 # print(counter['directories'])
                 # print(path)
-                counter_aux = {'directories': counter['directories']-1,'files': 0}
+                counter_aux = {'directories': counter['directories']-1,
+                               'directories_symlink': counter['directories_symlink']-1,
+                               'files': 0,
+                               'files_symlink': 0}
                 contents_dic['lines'].extend( inner(path,
                                     prefix=prefix + extension,
                                     level=level - 1,
@@ -374,8 +378,8 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
                 #                  + path.name \
                 #                  + Style.RESET_ALL)
 
-        # Save structure of your package to a file in save_to_file
-        print_to_file(dir_path, contents_dic['lines'], counter, kwargs_dic)
+            # Save structure of your package to a file in save_to_file
+            # print_to_file(dir_path, contents_dic['lines'], counter, kwargs_dic)
 
 def tree(dir_path: Path,
          level: int = -1,
@@ -411,8 +415,9 @@ def tree(dir_path: Path,
             kwargs_dic['exclude_files'] = kwargs_dic['exclude_files']
 
     # Setup dictionary
-    if colors is None:
-        colors = {}
+    # if colors is None:
+        # colors = {}
+    colors = {} if colors is None else colors
 
     colors['tree_dir_color']    = colors.get('tree_dir_color', Fore.RED)
     colors['dir_color']         = colors.get('directory', Fore.BLUE)
@@ -598,42 +603,99 @@ def tree(dir_path: Path,
     #                             + Style.RESET_ALL)
 
     # Print the directory name specified by dir_path
-    print(colors['out_code'] \
-          + '#################################################' \
-          + Style.RESET_ALL)
-    print(colors['out_code'] + dir_path.name + Style.RESET_ALL)
+    # Check if save_to_file is provided in kwargs and print to file if set
+    if 'save_to_file' in kwargs:
+        file=kwargs.get('save_to_file', 'out.txt')
+        print('Saving to file')
 
-    # Create a single dictionary with dictionaries
-    # single_dict = {'counter': counter,
-    #                 'kwargs_dic': kwargs_dic,
-    #                 'colors': colors,
-    #                 'file_extensions_colors': file_extensions_colors}
+        with open(kwargs['save_to_file'], 'w', encoding='utf-8') as file:
+            print(colors['out_code'] \
+                  + '#################################################' \
+                  + Style.RESET_ALL,
+                  file=file)
+            print(colors['out_code'] + dir_path.name + Style.RESET_ALL,
+                  file=file)
 
-    # prefix = ''
-    iterator = inner(dir_path,
-                     level=level,
-                     counter=counter,
-                     kwargs_dic=kwargs_dic,
-                     colors=colors,
-                     file_extensions_colors=file_extensions_colors)
+            iterator = inner(dir_path,
+                             level=level,
+                             counter=counter,
+                             kwargs_dic=kwargs_dic,
+                             colors=colors,
+                             file_extensions_colors=file_extensions_colors)
 
-    for line in islice(iterator, kwargs_dic['length_limit']):
-        print(line)
+            # Use tqdm with a dynamic total based on the iterator
+            # total_lines = sum(1 for _ in iterator)
 
-    if next(iterator, None):
-        print(f"... length_limit, {kwargs_dic['length_limit']}, reached, counted:")
+            # Re-define again iterator
+            # iterator = inner(dir_path,
+                             # level=level,
+                             # counter=counter,
+                             # kwargs_dic=kwargs_dic,
+                             # colors=colors,
+                             # file_extensions_colors=file_extensions_colors)
 
-    print(colors['out_stats'] \
+            # Wrap the iterator with tqdm to track progress
+            # iterator = tqdm(iterator,
+                             # total=total_lines,
+                             # file=sys.stdout,
+                             # dynamic_ncols=True,
+                             # unit=" line")
+
+            for line in islice(iterator, kwargs_dic['length_limit']):
+                print(line,file=file)
+
+            if next(iterator, None):
+                print(f"... length_limit, {kwargs_dic['length_limit']}, reached, counted:",
+                      file=file)
+
+            print(colors['out_stats'] \
+            + f"\n{counter['directories']} directories ({counter['directories_symlink']} symlink)" \
+            + (f", {counter['files']} files ({counter['files_symlink']} symlink)" \
+            if 'files' in counter else '') + Style.RESET_ALL,
+            file=file)
+            print(colors['out_code']  \
+                  + '#################################################' \
+                  + Style.RESET_ALL,
+                  file=file)
+            print(colors['out_code']  \
+                  + f'Generated: treehue_colored @{current_year} - © Jean Gomes -' \
+                  + Style.RESET_ALL,
+                  file=file)
+            print(colors['out_code'] \
+                  + '#################################################' \
+                  + Style.RESET_ALL,
+                  file=file)
+    else:
+        print(colors['out_code'] \
+              + '#################################################' \
+              + Style.RESET_ALL)
+        print(colors['out_code'] + dir_path.name + Style.RESET_ALL)
+
+        iterator = inner(dir_path,
+                         level=level,
+                         counter=counter,
+                         kwargs_dic=kwargs_dic,
+                         colors=colors,
+                         file_extensions_colors=file_extensions_colors)
+
+        for line in islice(iterator, kwargs_dic['length_limit']):
+            print(line)
+
+        if next(iterator, None):
+            print(f"... length_limit, {kwargs_dic['length_limit']}, reached, counted:")
+
+        print(colors['out_stats'] \
            + f"\n{counter['directories']} directories ({counter['directories_symlink']} symlink)" \
            + (f", {counter['files']} files ({counter['files_symlink']} symlink)" \
               if 'files' in counter else '') + Style.RESET_ALL)
-    print(colors['out_code']  \
+        print(colors['out_code']  \
           + '#################################################' \
           + Style.RESET_ALL)
-    print(colors['out_code']  \
+        print(colors['out_code']  \
           + f'Generated: treehue_colored @{current_year} - © Jean Gomes -' \
           + Style.RESET_ALL)
-    print(colors['out_code'] \
+        print(colors['out_code'] \
           + '#################################################' \
           + Style.RESET_ALL)
+
     #print("TEST", exclude_files)
