@@ -81,10 +81,10 @@ Example of the TreeHue script in python
 <pre>
 #################################################
 workspace
-├── tree.out
 ├── README.md
 ├── LICENSE.txt
 ├── index.html
+├── requirements.txt
 ├── dist
 │   ├── TreeHue-0.0.4.tar.gz
 │   └── TreeHue-0.0.4-py3.9.egg
@@ -198,10 +198,9 @@ workspace
     │   │   ├── 30d3b504890de341def7f2ccb7c7247b27580b
     │   │   └── 5bc5c1096217c4d85d324fc6c6246b28d15d02
     │   ├── 7a
-    │   │   ├── 26f38c6a45c060a5c1ffd8e435698c4a4cfeea
     │   │   └── 66d2054794646472ee0127bfa1159dd661b24c
-    │   ├── c7
-    │   │   └── f45a9b41a6f5fef0434fc1212694826d713bc8
+    │   ├── 02
+    │   │   └── f2a1a4d4f1120595b86b329024d338ff63ce56
     │   ├── f5
     │   │   ├── 2f76ca688f4a60eee4f3afa06b0dd2809b5e8b
     │   │   └── 6b034a3e2e3820180dc484cf6bea060087c358
@@ -210,6 +209,8 @@ workspace
     │   ├── e6
     │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
     │   │   └── f9c79cf41b840c0ae67e13614b934a2a789279
+    │   ├── 1a
+    │   │   └── 4ef32a0105b218663619ee82b32d7d97f80f55
     │   ├── 89
     │   │   └── 2f612378d5a27a26e10db67eab2a3552b9949f
     │   ├── d2
@@ -218,8 +219,7 @@ workspace
     │   ├── 9a
     │   │   └── 666ea0f13a1f7e77fd56ada39a8ec927425618
     │   ├── a5
-    │   │   ├── 7693046b0661870c3e9bf1055c6abb0343b3f5
-    │   │   └── 3b48eba87b368cd3c2763579e0d1214066cfc9
+    │   │   └── 7693046b0661870c3e9bf1055c6abb0343b3f5
     │   ├── d5
     │   │   ├── b27190c5d8fe67cfa4913fe9808e13e889fe89
     │   │   └── 62950fdb1072e09dd436b0b00b1424f6ef26fe
@@ -233,13 +233,14 @@ workspace
     │   │   └── 340c7e72d5c852585d0faea06985a720d4c2df
     │   ├── 44
     │   │   └── f6f369c624e49362c1f1a8acf3a24dec8bf725
+    │   ├── 58
+    │   │   └── 18e70a371515a80d8931b4798410284c03f1ed
     │   ├── pack
     │   ├── 4f
     │   │   └── 069ff5b07946e906e38c4723f3f8126247e7f6
     │   ├── f4
     │   │   └── 8d38249f5c0c8f7b6eff6dfac8043dbbe807f2
     │   ├── 69
-    │   │   ├── af46ff8d580519bf80012a774a0421f2700ecc
     │   │   ├── 37cfc0969ec53e3e663807c206d0c0e76bc849
     │   │   └── 10a33a2173e3a6992d9b9e9dd8beb44b6d2ff5
     │   ├── b5
@@ -247,6 +248,7 @@ workspace
     │   ├── f1
     │   │   └── 233fe1a082ef10f448ff9d378fb59b2e79b981
     │   ├── 1d
+    │   │   ├── 169c02c84909342bd0352f4ebbb082b3ae508f
     │   │   └── d1726b5a3024971c55a24f362d84c448784ed6
     │   ├── e2
     │   │   └── 5a8e6d9a04cea70b1f7d7c9115163aa160fab5
@@ -264,6 +266,8 @@ workspace
     │   │   └── c87f28b7ecb85820302d56fdab8c8fef5f8a37
     │   ├── 5c
     │   │   └── b0a7b71a64caeedc165a9db06d654d6d5e12ec
+    │   ├── 55
+    │   │   └── eafac3cac23bfceedaafc834f83b762944312c
     │   ├── 71
     │   │   └── 5dde02a154e818b07a5c7f14604e55dbdd9d93
     │   ├── ea
@@ -297,8 +301,8 @@ workspace
     │   │   └── d50e99fb7cf244bf107536731fb5c56a815ad3
     │   ├── cc
     │   │   └── 13233786d42be7ad805906a84d80095091806b
-    │   ├── 6c
-    │   │   └── 9eeb8bed13d92dc2860c19656705478d8fc839
+    │   ├── a8
+    │   │   └── d9d704e3dba9e9a31e8118c11b20a28cfd8bcd
     │   ├── 1e
     │   │   └── 57aa55475620ecca7929fe3e54d5597e41c3cc
     │   ├── 4d
@@ -309,15 +313,10 @@ workspace
     │   │   └── fc3aaf2a8124fbdf1039f26e4fa82df56b2519
     │   ├── 42
     │   │   └── 68430b645889d28100a57891f1c0e589b7c1cd
-    │   ├── 11
-    │   │   └── 28c1f6627fd028f40cc85bcf2fe51ac3e37a70
-    │   ├── e5
-    │   │   └── a51a0da3ebf23d221cca2080f543ab4f7c5587
+    │   ├── 27
+    │   │   └── 7b5bc280f8ba3d30f76d7f0e26b8a049ced6f3
     │   ├── 0f
     │   │   └── 8971bd9942a347ea402b0b5e5979b0405e1e30
-    │   ├── cb
-    │   │   ├── 8f64e7f137aee9518c3019d7ddb59fe2ad2a67
-    │   │   └── 33c4b11b0247e337441a2bcdeb85b59b29be7e
     │   ├── d3
     │   │   └── 1637f0e0bef1066586aad6f204d78ad4ad619d
     │   ├── 07
@@ -326,11 +325,14 @@ workspace
     │   ├── 88
     │   │   └── f2578c6337dec2fb8e3301da2239baca2403c5
     │   ├── d0
-    │   │   └── 3ad4e41ecb4545372e25e6bb667f89bc432346
+    │   │   ├── 3ad4e41ecb4545372e25e6bb667f89bc432346
+    │   │   └── 63da3069458d537958d2856c8a9e4c4ad0bc7a
     │   ├── 05
     │   │   └── e36c58292b7a104c8d8ab917b0d682638ae6a0
     │   ├── 1f
     │   │   └── acfbac556f8e938d75ba6e53d8be00eb5c2ae6
+    │   ├── 6e
+    │   │   └── d1df11da5ffc2e9b08a0f016aa6d98d1acf362
     │   └── 3b
     │       ├── c9b77a099f53bcba1b21baf0637b3af5eee26d
     │       └── d3b5a80009b500e3e466ba237cbd6b49c60ec5
@@ -343,7 +345,7 @@ workspace
             └── origin
                 └── main
 
-106 directories, 155 files
+108 directories, 155 files
 #################################################
 Generated with tree_colored @ 2024 - © Jean Gomes
 #################################################
