@@ -3,7 +3,7 @@ email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@as
 
 github repository: <a href='https://github.com/neutrinomuon/TreeHue/'>TreeHue</a>
 
-last stable version: 0.0.3
+last stable version: 0.0.4
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg -->
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)
 

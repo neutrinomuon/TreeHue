@@ -180,6 +180,8 @@ def inner(dir_path: Path, prefix: str = '', level=-1, **kwargs):
     counter = kwargs.get('counter', {})
     kwargs_dic = kwargs.get('kwargs_dic', {})
 
+    kwargs_dic['length_limit'] = kwargs.get('length_limit', 1000)
+
     # colorido= {'colors': kwargs.get('colors', {}),
     #             'file_extensions_colors': kwargs.get('file_extensions_colors', {})}
 
