@@ -85,6 +85,8 @@ workspace
 ├── LICENSE.txt
 ├── index.html
 ├── requirements.txt
+├── dist
+│   └── TreeHue-0.0.5.tar.gz
 ├── setup.py
 ├── src
 │   └── python
@@ -97,6 +99,18 @@ workspace
 │       ├── example1.out
 │       ├── __init__.py
 │       └── treehue_colored.py
+├── build
+│   └── lib
+│       └── TreeHue
+│           ├── treehue.py
+│           ├── __init__.py
+│           └── treehue_colored.py
+├── TreeHue.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   ├── top_level.txt
+│   └── requires.txt
 ├── showdown.min.js
 ├── version.txt
 ├── __pycache__
@@ -205,6 +219,7 @@ workspace
     │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
     │   │   └── f9c79cf41b840c0ae67e13614b934a2a789279
     │   ├── 89
+    │   │   ├── bf1e584e0fdcb194183cca08f6206f7e448ba5
     │   │   └── 9361eaea332953134f3ddddb16c14717659845
     │   ├── d2
     │   │   └── 98a482db718d0159412485fedab1b752a251d9
@@ -214,9 +229,14 @@ workspace
     │   │   ├── b27190c5d8fe67cfa4913fe9808e13e889fe89
     │   │   └── 62950fdb1072e09dd436b0b00b1424f6ef26fe
     │   ├── 97
+    │   │   ├── 64ffd6225da94e8c39683afad348e30470d0a8
     │   │   └── a508cbec0dc2792317983e8f69d211429ed7c7
     │   ├── bb
     │   │   └── deab6222cb8ad8ab423239cbeff9e6163d0d38
+    │   ├── b3
+    │   │   └── 075f07eed36d2bfd47337fe947948f79c5a658
+    │   ├── 8f
+    │   │   └── 1797f1185efbc96c5ff82332c8265e75a9516b
     │   ├── 44
     │   │   └── f6f369c624e49362c1f1a8acf3a24dec8bf725
     │   ├── ac
@@ -229,6 +249,8 @@ workspace
     │   │   └── 413881cd066544add12e0d60df723cf8a93b82
     │   ├── 4f
     │   │   └── 069ff5b07946e906e38c4723f3f8126247e7f6
+    │   ├── f4
+    │   │   └── 0704a286f527ddfa168f2ace3f45f7344c8935
     │   ├── 69
     │   │   ├── 37cfc0969ec53e3e663807c206d0c0e76bc849
     │   │   ├── eec725f8df1d7332d47852a93a036b7d3ae09e
@@ -240,11 +262,12 @@ workspace
     │   ├── 1d
     │   │   └── d1726b5a3024971c55a24f362d84c448784ed6
     │   ├── b0
+    │   │   ├── 31bbface1dbdfe8824966e4d4a8663b0280f1c
     │   │   └── 1a14ea53366ade692980ecd3134e82e8b03834
-    │   ├── e4
-    │   │   └── a263f4e2a6673ca93cadcd355a2622b02a99dc
     │   ├── e2
     │   │   └── 5a8e6d9a04cea70b1f7d7c9115163aa160fab5
+    │   ├── ee
+    │   │   └── ff3d2aa3f9967cc6630fd49f35a5674298b185
     │   ├── c9
     │   │   └── 01b15d5e0b6168d3fec083b5e3e0cc6ceed184
     │   ├── info
@@ -254,6 +277,10 @@ workspace
     │   │   └── 42c32985bedb76e894ab0955efb3c5c11db330
     │   ├── 60
     │   │   └── 2f24b0b12eb1b298df02c1c2eadf0d74f8c32a
+    │   ├── aa
+    │   │   └── 094d9f64a7cc9debc3bc069b28f8398a62508f
+    │   ├── 7f
+    │   │   └── d3962e0cb670e58766edcbb906e153cf3ad97d
     │   ├── d4
     │   │   └── 7faab4c42d3177ac0531ddfa5f6797ce7f2996
     │   ├── d9
@@ -264,11 +291,14 @@ workspace
     │   │   └── 5dde02a154e818b07a5c7f14604e55dbdd9d93
     │   ├── ea
     │   │   └── 0d5de6beed610ae74388992752f913326edcfe
+    │   ├── 91
+    │   │   └── 2451ea382770ce89f3b1152663160c476f7f5d
     │   ├── 21
     │   │   ├── 64718931e14f51f63390bd06f2b2a58ffc9e6b
     │   │   └── f27e4554aacede0f83afede078fc23aa15a097
     │   ├── 8b
-    │   │   └── 31f01815380ffc13b0c9e46346f9468071aef2
+    │   │   ├── 31f01815380ffc13b0c9e46346f9468071aef2
+    │   │   └── 137891791fe96927ad78e64b0aad7bded08bdc
     │   ├── b4
     │   │   └── 69a80b4c105fd028dbba771295a6828eb0ee4c
     │   ├── c1
@@ -284,8 +314,6 @@ workspace
     │   │   └── 4b5031750c3076e27096ca29bf728901d8fe6d
     │   ├── 5a
     │   │   └── 8dbd0652e37cc2d89b4899e307abcac8bda553
-    │   ├── 50
-    │   │   └── fe4974969628d33d4d3cc175d9c1b74d1955d5
     │   ├── fd
     │   │   └── db5a41258a96bd099b7f15881de301a4b70fb8
     │   ├── 56
@@ -299,8 +327,12 @@ workspace
     │   │   └── 53958a9a770f18fbfd9dd5600273b37f91c11f
     │   ├── 6b
     │   │   └── 235cfec2aa3378fa28a0c3f0b53bf2799e0a33
+    │   ├── 15
+    │   │   └── 89d268bc79400f601d884d8d5db7301aecb9f9
     │   ├── e0
     │   │   └── 00c61baf5ad61d36704c14ab4003e7a43a4ec9
+    │   ├── 19
+    │   │   └── a8926accab36b527617c1f2e63a6fa7de4531f
     │   ├── 4d
     │   │   └── e96b87204d2b88eb50fc5c103a791ed86db43f
     │   ├── 10
@@ -323,7 +355,7 @@ workspace
     │   ├── d3
     │   │   └── 1637f0e0bef1066586aad6f204d78ad4ad619d
     │   ├── 07
-    │   │   └── 2bf227f10bb56310ea902218a93df7b9e9fac5
+    │   │   └── c3f5f5faa7fdad4bf958ac15c26a570b438adb
     │   ├── d0
     │   │   ├── 3ad4e41ecb4545372e25e6bb667f89bc432346
     │   │   └── 63da3069458d537958d2856c8a9e4c4ad0bc7a
@@ -343,7 +375,7 @@ workspace
             └── origin
                 └── main
 
-102 directories, 159 files
+114 directories, 179 files
 #################################################
 Generated with tree_colored @ 2024 - © Jean Gomes
 #################################################
