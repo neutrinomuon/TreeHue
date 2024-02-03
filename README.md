@@ -3,7 +3,7 @@ email: [antineutrinomuon@gmail.com](mailto:antineutrinomuon@gmail.com), [jean@as
 
 github repository: <a href='https://github.com/neutrinomuon/TreeHue/'>TreeHue</a>
 
-last stable version: 0.0.4
+last stable version: 0.0.5
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.10433044.svg -->
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.10581155.svg)
 
@@ -85,9 +85,6 @@ workspace
 ├── LICENSE.txt
 ├── index.html
 ├── requirements.txt
-├── dist
-│   ├── TreeHue-0.0.4.tar.gz
-│   └── TreeHue-0.0.4-py3.9.egg
 ├── setup.py
 ├── src
 │   └── python
@@ -100,18 +97,6 @@ workspace
 │       ├── example1.out
 │       ├── __init__.py
 │       └── treehue_colored.py
-├── build
-│   └── lib
-│       └── TreeHue
-│           ├── treehue.py
-│           ├── __init__.py
-│           └── treehue_colored.py
-├── TreeHue.egg-info
-│   ├── PKG-INFO
-│   ├── SOURCES.txt
-│   ├── dependency_links.txt
-│   ├── top_level.txt
-│   └── requires.txt
 ├── showdown.min.js
 ├── version.txt
 ├── __pycache__
@@ -128,33 +113,46 @@ workspace
 │   └── TreeHue_Screenshot.png
 ├── TreeHue_conda
 │   ├── osx-64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── win-arm64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── README.md
 │   ├── osx-arm64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── win-64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-s390x
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-aarch64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-armv6l
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── meta.yaml
 │   ├── linux-32
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-ppc64le
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-ppc64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── win-32
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   ├── linux-64
-│   │   └── treehue-0.0.3-py39_0.tar.bz2
+│   │   ├── treehue-0.0.3-py39_0.tar.bz2
+│   │   └── treehue-0.0.4-py39_0.tar.bz2
 │   └── linux-armv7l
-│       └── treehue-0.0.3-py39_0.tar.bz2
+│       ├── treehue-0.0.3-py39_0.tar.bz2
+│       └── treehue-0.0.4-py39_0.tar.bz2
 ├── .github
 │   └── workflows
 │       ├── main.yml
@@ -192,147 +190,147 @@ workspace
     ├── HEAD
     ├── description
     ├── objects
-    │   ├── 41
-    │   │   └── 5e27acccc7123d8a1864e12f423b06917717e9
+    │   ├── 31
+    │   │   └── 874ff501dbdf9fbfb69a7185b441a93774b6bc
     │   ├── c5
     │   │   ├── 30d3b504890de341def7f2ccb7c7247b27580b
     │   │   └── 5bc5c1096217c4d85d324fc6c6246b28d15d02
     │   ├── 7a
     │   │   └── 66d2054794646472ee0127bfa1159dd661b24c
-    │   ├── 02
-    │   │   └── f2a1a4d4f1120595b86b329024d338ff63ce56
+    │   ├── c7
+    │   │   └── 3af08177e5d998556f7fe54282451a989e5410
     │   ├── f5
-    │   │   ├── 2f76ca688f4a60eee4f3afa06b0dd2809b5e8b
-    │   │   └── 6b034a3e2e3820180dc484cf6bea060087c358
-    │   ├── bd
-    │   │   └── 9d788edc091dcc07074f3c200ece2ca702b134
+    │   │   └── 2f76ca688f4a60eee4f3afa06b0dd2809b5e8b
     │   ├── e6
     │   │   ├── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
     │   │   └── f9c79cf41b840c0ae67e13614b934a2a789279
-    │   ├── 1a
-    │   │   └── 4ef32a0105b218663619ee82b32d7d97f80f55
     │   ├── 89
-    │   │   └── 2f612378d5a27a26e10db67eab2a3552b9949f
+    │   │   └── 9361eaea332953134f3ddddb16c14717659845
     │   ├── d2
-    │   │   ├── 8ec90f746317c53ed9301c39f543b415865024
     │   │   └── 98a482db718d0159412485fedab1b752a251d9
     │   ├── 9a
     │   │   └── 666ea0f13a1f7e77fd56ada39a8ec927425618
-    │   ├── a5
-    │   │   └── 7693046b0661870c3e9bf1055c6abb0343b3f5
     │   ├── d5
     │   │   ├── b27190c5d8fe67cfa4913fe9808e13e889fe89
     │   │   └── 62950fdb1072e09dd436b0b00b1424f6ef26fe
-    │   ├── 13
-    │   │   └── b27e1325431b9874905f2f77c53a5d602a43d8
     │   ├── 97
     │   │   └── a508cbec0dc2792317983e8f69d211429ed7c7
-    │   ├── 1b
-    │   │   └── 9df24f9acf1991096da996f2604a7795d0548c
-    │   ├── 81
-    │   │   └── 340c7e72d5c852585d0faea06985a720d4c2df
+    │   ├── bb
+    │   │   └── deab6222cb8ad8ab423239cbeff9e6163d0d38
     │   ├── 44
     │   │   └── f6f369c624e49362c1f1a8acf3a24dec8bf725
-    │   ├── 58
-    │   │   └── 18e70a371515a80d8931b4798410284c03f1ed
+    │   ├── ac
+    │   │   └── dbf2179c243a2b888e400e20212a94cb230f07
+    │   ├── 17
+    │   │   └── 2b7d9918b281939290370ac28875f1299dcd0b
     │   ├── pack
+    │   ├── c2
+    │   │   ├── b7151cb2e5abc6af8f1f7da6d459c0bcbfa779
+    │   │   └── 413881cd066544add12e0d60df723cf8a93b82
     │   ├── 4f
     │   │   └── 069ff5b07946e906e38c4723f3f8126247e7f6
-    │   ├── f4
-    │   │   └── 8d38249f5c0c8f7b6eff6dfac8043dbbe807f2
     │   ├── 69
     │   │   ├── 37cfc0969ec53e3e663807c206d0c0e76bc849
+    │   │   ├── eec725f8df1d7332d47852a93a036b7d3ae09e
     │   │   └── 10a33a2173e3a6992d9b9e9dd8beb44b6d2ff5
     │   ├── b5
-    │   │   └── 2d09afbd1b39082f77dacdf7b005816be2cccf
+    │   │   └── 23684bf16d8111d5b2b2f51f559ce10ce0d2aa
     │   ├── f1
     │   │   └── 233fe1a082ef10f448ff9d378fb59b2e79b981
     │   ├── 1d
-    │   │   ├── 169c02c84909342bd0352f4ebbb082b3ae508f
     │   │   └── d1726b5a3024971c55a24f362d84c448784ed6
+    │   ├── b0
+    │   │   └── 1a14ea53366ade692980ecd3134e82e8b03834
+    │   ├── e4
+    │   │   └── a263f4e2a6673ca93cadcd355a2622b02a99dc
     │   ├── e2
     │   │   └── 5a8e6d9a04cea70b1f7d7c9115163aa160fab5
-    │   ├── ee
-    │   │   └── ff3d2aa3f9967cc6630fd49f35a5674298b185
     │   ├── c9
     │   │   └── 01b15d5e0b6168d3fec083b5e3e0cc6ceed184
     │   ├── info
-    │   ├── aa
-    │   │   ├── faaa6d5085c1804e5e228e3d3f627d2a782e61
-    │   │   └── 094d9f64a7cc9debc3bc069b28f8398a62508f
-    │   ├── 8e
-    │   │   └── 1969aa17e5b94bb2c157aa08f317b4f51aa8ae
-    │   ├── 36
-    │   │   └── c87f28b7ecb85820302d56fdab8c8fef5f8a37
-    │   ├── 5c
-    │   │   └── b0a7b71a64caeedc165a9db06d654d6d5e12ec
-    │   ├── 55
-    │   │   └── eafac3cac23bfceedaafc834f83b762944312c
+    │   ├── ff
+    │   │   └── 63db7da7e4e6671dc557120abd671735d8c4f8
+    │   ├── 3d
+    │   │   └── 42c32985bedb76e894ab0955efb3c5c11db330
+    │   ├── 60
+    │   │   └── 2f24b0b12eb1b298df02c1c2eadf0d74f8c32a
+    │   ├── d4
+    │   │   └── 7faab4c42d3177ac0531ddfa5f6797ce7f2996
+    │   ├── d9
+    │   │   └── 20de400aaadba6479f5cde68a03e1ff63a1d99
+    │   ├── 08
+    │   │   └── c93ab2b22ad17d39326899c95e835e75f7cf5d
     │   ├── 71
     │   │   └── 5dde02a154e818b07a5c7f14604e55dbdd9d93
     │   ├── ea
     │   │   └── 0d5de6beed610ae74388992752f913326edcfe
     │   ├── 21
+    │   │   ├── 64718931e14f51f63390bd06f2b2a58ffc9e6b
     │   │   └── f27e4554aacede0f83afede078fc23aa15a097
     │   ├── 8b
-    │   │   └── 137891791fe96927ad78e64b0aad7bded08bdc
+    │   │   └── 31f01815380ffc13b0c9e46346f9468071aef2
     │   ├── b4
     │   │   └── 69a80b4c105fd028dbba771295a6828eb0ee4c
     │   ├── c1
     │   │   └── 284539918de9e3fe0f9dcd17808463e17e1481
     │   ├── 4a
     │   │   └── 409f730ebcdc71117d0a93dc2728970860403a
-    │   ├── 20
-    │   │   ├── 2fceb88d0351224bf22d9aecb7a5a308a76347
-    │   │   └── fcefe73e574da8258f797e2d3a32659051c3dc
+    │   ├── fa
+    │   │   └── 8361b63848a5f4a68f7782b970c44f53eb5a3c
+    │   ├── 0e
+    │   │   └── 330900a52a8a8807e8c9160c07c0bfb9b37e42
     │   ├── 80
+    │   │   ├── de325dccbfb87a726dd793fdbeaf14a70abb1c
     │   │   └── 4b5031750c3076e27096ca29bf728901d8fe6d
     │   ├── 5a
     │   │   └── 8dbd0652e37cc2d89b4899e307abcac8bda553
-    │   ├── 2a
-    │   │   └── fe3b3ac75bd1f8694b1bd0de68e9339ab18f74
+    │   ├── 50
+    │   │   └── fe4974969628d33d4d3cc175d9c1b74d1955d5
     │   ├── fd
     │   │   └── db5a41258a96bd099b7f15881de301a4b70fb8
+    │   ├── 56
+    │   │   ├── aaad52e4ba7a8b43e2e3aeda86630f8b944bb0
+    │   │   └── 92729f0e25fbf8a98c43b2f354b7ecda7d28c7
+    │   ├── 54
+    │   │   └── 0830e25e08fe35938b61802ab38c36c3c3be49
+    │   ├── 65
+    │   │   └── bd3a127ddddf91fe6ca7a0c8eadca2b001abd4
     │   ├── a7
     │   │   └── 53958a9a770f18fbfd9dd5600273b37f91c11f
     │   ├── 6b
     │   │   └── 235cfec2aa3378fa28a0c3f0b53bf2799e0a33
-    │   ├── 76
-    │   │   └── d50e99fb7cf244bf107536731fb5c56a815ad3
-    │   ├── cc
-    │   │   └── 13233786d42be7ad805906a84d80095091806b
-    │   ├── a8
-    │   │   └── d9d704e3dba9e9a31e8118c11b20a28cfd8bcd
-    │   ├── 1e
-    │   │   └── 57aa55475620ecca7929fe3e54d5597e41c3cc
+    │   ├── e0
+    │   │   └── 00c61baf5ad61d36704c14ab4003e7a43a4ec9
     │   ├── 4d
     │   │   └── e96b87204d2b88eb50fc5c103a791ed86db43f
+    │   ├── 10
+    │   │   └── fefcce31bcb548c1ddd5cced81f71da7fef0a3
     │   ├── 01
     │   │   └── 0e1cf9eb185c1edb1ae5d89b81c6c0977c03ab
+    │   ├── de
+    │   │   ├── 8ce70558c208ffe64dfd2fc6c255c73df0c3ff
+    │   │   └── c290c002941e33d5ec6647b1a6dc523d7995ee
     │   ├── 73
     │   │   └── fc3aaf2a8124fbdf1039f26e4fa82df56b2519
     │   ├── 42
+    │   │   ├── c190b8c174a9fe306bba55a4cdd0c3af933b05
     │   │   └── 68430b645889d28100a57891f1c0e589b7c1cd
-    │   ├── 27
-    │   │   └── 7b5bc280f8ba3d30f76d7f0e26b8a049ced6f3
     │   ├── 0f
     │   │   └── 8971bd9942a347ea402b0b5e5979b0405e1e30
+    │   ├── 5f
+    │   │   ├── 2d0a3bfe8ce7673f298ed20d24e339aa8772a4
+    │   │   └── 34a88fb1186ab80279ff6e5933201f21f45aba
     │   ├── d3
     │   │   └── 1637f0e0bef1066586aad6f204d78ad4ad619d
     │   ├── 07
-    │   │   ├── e84a15473342e5417a4a27cf05110adb4b301f
-    │   │   └── c3f5f5faa7fdad4bf958ac15c26a570b438adb
-    │   ├── 88
-    │   │   └── f2578c6337dec2fb8e3301da2239baca2403c5
+    │   │   └── 2bf227f10bb56310ea902218a93df7b9e9fac5
     │   ├── d0
     │   │   ├── 3ad4e41ecb4545372e25e6bb667f89bc432346
     │   │   └── 63da3069458d537958d2856c8a9e4c4ad0bc7a
-    │   ├── 05
-    │   │   └── e36c58292b7a104c8d8ab917b0d682638ae6a0
     │   ├── 1f
     │   │   └── acfbac556f8e938d75ba6e53d8be00eb5c2ae6
-    │   ├── 6e
-    │   │   └── d1df11da5ffc2e9b08a0f016aa6d98d1acf362
+    │   ├── d1
+    │   │   └── d64756be8d0ff3cd25ed45a1177cab6b5f74dd
     │   └── 3b
     │       ├── c9b77a099f53bcba1b21baf0637b3af5eee26d
     │       └── d3b5a80009b500e3e466ba237cbd6b49c60ec5
@@ -345,7 +343,7 @@ workspace
             └── origin
                 └── main
 
-108 directories, 155 files
+102 directories, 159 files
 #################################################
 Generated with tree_colored @ 2024 - © Jean Gomes
 #################################################
